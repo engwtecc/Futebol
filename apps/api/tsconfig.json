@@ -7,31 +7,16 @@
 
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-
     "strict": true,
-
     "esModuleInterop": true,
-
     "allowSyntheticDefaultImports": true,
-
     "sourceMap": true,
-
     "outDir": "./dist",
-
     "incremental": true,
-
     "skipLibCheck": true,
-
     "resolveJsonModule": true,
-
-    "baseUrl": "./",
-
-    "paths": {
-      "*": ["src/*"]
-    }
+    "baseUrl": "./"
   },
-
-  "include": ["src/**/*", "prisma/**/*"],
-
-  "exclude": ["node_modules", "dist"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist", "test", "**/*.spec.ts"]
 }
