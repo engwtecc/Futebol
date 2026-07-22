@@ -1,14 +1,14 @@
-import { Injectable, OnModuleInit } from '@nestjs/common';
-import { PrismaClient } from '@prisma/client';
+import { Global, Module } from '@nestjs/common';
+import { PrismaService } from './prisma.service';
 
-@Injectable()
-export class PrismaService
-  extends PrismaClient
-  implements OnModuleInit {
+@Global()
 
-  async onModuleInit() {
-    await this.$connect();
-    console.log('✅ PostgreSQL conectado.');
-  }
+@Module({
 
-}
+    providers:[PrismaService],
+
+    exports:[PrismaService]
+
+})
+
+export class PrismaModule {}
