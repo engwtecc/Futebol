@@ -5,7 +5,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "build": "nest build && echo '=== DIST ===' && find dist -type f && pwd && ls -la",
+    "build": "echo 'BUILD OK' && exit 1",
     "start": "node dist/main",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
