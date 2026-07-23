@@ -5,7 +5,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "build": "npx tsc -p tsconfig.build.json --showConfig",
+    "build": "pwd && ls -R && npx nest build && ls -R dist",
     "start": "node dist/main",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
