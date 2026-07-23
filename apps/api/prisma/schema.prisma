@@ -1,0 +1,64 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum GameDayStatus {
+  OPEN
+  FINISHED
+
+  @@map("game_day_status")
+}
+
+enum MatchWinner {
+  YELLOW
+  BLUE
+  DRAW
+
+  @@map("match_winner")
+}
+
+enum TeamColor {
+  YELLOW
+  BLUE
+
+  @@map("team_color")
+}
+
+model User {
+
+  id         String   @id @default(uuid()) @db.Uuid
+
+  name       String
+
+  email      String   @unique
+
+  password   String
+
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  updatedAt  DateTime @updatedAt @map("updated_at")
+
+  @@map("users")
+}
+
+model Player {
+
+  id          String   @id @default(uuid()) @db.Uuid
+
+  name        String
+
+  nickname    String?
+
+  active      Boolean  @default(true)
+
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("players")
+}

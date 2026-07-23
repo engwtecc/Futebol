@@ -1,0 +1,17 @@
+node_modules
+
+dist
+
+coverage
+
+.env
+
+.prisma
+
+*.log
+
+.vscode
+
+.idea
+
+.DS_Store
