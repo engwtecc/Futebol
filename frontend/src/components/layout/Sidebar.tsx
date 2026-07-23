@@ -40,7 +40,7 @@ export default function Sidebar(){
 
                             to={String(rota)}
 
-                            className={({isActive})=>
+                            className={({ isActive }: { isActive: boolean }) =>
 
                                 `flex items-center gap-3 px-4 py-3 rounded-lg mb-2 transition
 

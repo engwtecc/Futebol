@@ -1,21 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 html,
 body,
-#root{
-
-    height:100%;
-
+#root {
+  height: 100%;
 }
 
-body{
-
-    margin:0;
-
-    font-family:Inter,Arial,sans-serif;
-
-    background:#f1f5f9;
-
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #f1f5f9;
 }

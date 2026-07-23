@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
-
 import { api } from "../services/api";
-
-import { Jogador } from "../types/Jogador";
+import type { Jogador } from "../types/Jogador";
 
 export function useJogadores(){
 
